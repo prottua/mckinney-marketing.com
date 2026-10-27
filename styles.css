@@ -115,3 +115,22 @@ a.header-cta span[aria-hidden="true"] { display: inline-block; font-size: 18px; 
 @media(max-width:640px) {
   a.header-cta, a.hero-cta, a.button, button.header-cta { min-height: 46px; padding: 12px 16px; font-size: 13px; }
 }
+
+/* Shared polish: consistent buttons and accessible, purposeful line icons */
+.button, .button-yellow, .header-cta, .explore-toggle, .footer-cta, .detail-cta, .card-link, .form-submit, button[type="submit"] {
+  border-radius: 12px !important;
+}
+.header-cta, .explore-toggle { min-height: 44px; padding: 12px 18px; }
+.header-cta { gap: 0; }
+.explore-menu a { grid-template-columns: 26px minmax(0,1fr); border-radius: 12px; }
+.menu-arrow { display: none !important; }
+.principle-icon svg, .value-icon svg {
+  display: block; width: 25px; height: 25px; fill: none; stroke: currentColor;
+  stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+}
+.value-icon { width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 18px; color: var(--yellow); }
+.card-link { display: inline-flex; align-items: center; justify-content: center; min-width: 48px; height: 32px; padding: 0 10px; font-size: 11px !important; font-weight: 700; border: 1px solid rgba(255,213,31,.4); }
+.about-content .about-facts { display: none !important; }
+
+.journey-icon svg, .float-icon svg { display:block; width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+.card-link { text-decoration:none; }
