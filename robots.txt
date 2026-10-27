@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://mckinney-marketing.com/sitemap.xml

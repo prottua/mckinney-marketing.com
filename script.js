@@ -60,3 +60,23 @@
     });
   }
 })();
+
+// Strike Explore navigation dropdown
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.explore-toggle');
+  const menu = document.querySelector('.explore-menu');
+  if (!toggle || !menu) return;
+  const closeMenu = () => { menu.hidden = true; toggle.setAttribute('aria-expanded', 'false'); };
+  toggle.addEventListener('click', event => {
+    event.stopPropagation();
+    const willOpen = menu.hidden;
+    menu.hidden = !willOpen;
+    toggle.setAttribute('aria-expanded', String(willOpen));
+  });
+  document.addEventListener('click', event => {
+    if (!menu.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') { closeMenu(); toggle.focus(); }
+  });
+});
